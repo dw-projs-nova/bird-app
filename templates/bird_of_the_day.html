@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Bird of the Day{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>{{bird.name}}</h2>
+    {% if bird.date %}
+        <p>Observed on {{bird.date}}.</p>
+    {% endif %}
+    {% if bird.image %}
+        <img class="bird-image" src="{{bird.image}}" alt="{{bird.name}}">
+    {% endif %}
+    {% if bird.attribution %}
+        <p>{{bird.attribution}}</p>
+    {% endif %}
+    {% if bird.url %}
+        <p><a href="{{bird.url}}">View observation on iNaturalist</a></p>
+    {% endif %}
+</div>
+{% endblock %}

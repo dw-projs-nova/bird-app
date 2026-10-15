@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Bird Facts{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>{{bird.name}}</h2>
+    {% if bird.image %}
+        <img class="bird-image" src="{{bird.image}}" alt="{{bird.name}}">
+    {% endif %}
+    <p>{{bird.summary}}</p>
+    {% if bird.url %}
+        <p><a href="{{bird.url}}">Read more on Wikipedia</a></p>
+    {% endif %}
+</div>
+{% endblock %}

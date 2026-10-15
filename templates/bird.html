@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bird Page</title>
+{% extends "base.html" %}
 
-        <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
-    </head>
-    <body>
-        <h1>Bird App</h1>
-        <div class="container"
-            <p>This is the bird page!</p>
-            <img src="{{url_for('static', filename='images/bird.png')}}" alt="blue and brown bird on brown tree trunk" />
-        </div>
+{% block title %}Bird Page{% endblock %}
 
-        <div class="navigation">
-            <a href="{{url_for('home')}}">
-                Home
-            </a>
-        </div>
-    </body>
-</html>
+{% block content %}
+<div class="container">
+    <p>This is the bird page!</p>
+    <img class="bird-image" src="{{url_for('static', filename='images/bird.png')}}" alt="blue and brown bird on brown tree trunk" />
+</div>
+{% endblock %}

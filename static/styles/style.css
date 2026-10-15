@@ -21,7 +21,10 @@ h1 {
 
 .bird-image {
   max-width: 100%;
+  min-width: min(240px, 100%);
+  min-height: 180px;
   height: auto;
+  object-fit: cover;
   border-radius: 8px;
   margin: 20px 0;
 }
