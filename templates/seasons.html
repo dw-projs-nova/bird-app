@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasons Page</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+</head>
+<body>
+    <h1>Bird App</h1>
+    <h2>Seasons Page</h2>
+
+    <p>The current month is {{month}}.</p>
+    <p>The current year is {{year}}.</p>
+
+    {% if month in ["March" , "April" , "May"] %}
+        <p>It's spring!</p>
+    {% elif month in ["June" , "July" , "August"] %}
+        <p>It's summer!</p>
+    {% elif month in ["September" , "October" , "November"] %}
+        <p>It's fall!</p>
+    {% else %}
+        <p>It's winter!</p>
+    {% endif %}
+
+    <div class="navigation">
+            <a href="{{url_for('home')}}">
+                Home
+            </a>
+        </div>
+</body>
+</html>
